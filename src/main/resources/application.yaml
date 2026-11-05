@@ -1,3 +1,16 @@
 spring:
   application:
     name: aurora-shop-api
+
+  datasource:
+    url: jdbc:mariadb://localhost:3306/aurorashopme?createDatabaseIfNotExist=true
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
